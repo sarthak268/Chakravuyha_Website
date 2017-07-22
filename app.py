@@ -95,5 +95,10 @@ def logout():
     logout_user()
     return redirect(url_for('index'))
 
+@app.route('/blank')
+def blank():
+    return render_template('blank.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
