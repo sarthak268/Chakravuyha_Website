@@ -43,7 +43,7 @@ class RegisterForm(FlaskForm):
 
 @app.route('/')
 def index():
-    return render_template('index1.html')
+    return render_template('xy.html')
 
 
 @app.route('/home')
