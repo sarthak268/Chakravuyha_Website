@@ -12,6 +12,7 @@ Sign Up
 {% endblock %}
 
 {% block content %}
+<body background="/static/images/bg.jpg">
 <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -37,11 +38,14 @@ Sign Up
 <div class="container">
 
   <form class="form-signin" method="POST" action="/signup">
-    <h2 class="form-signin-heading">Sign Up</h2>
-    {{ form.hidden_tag() }}
+  <br><br><br>
+    <center><h2 class="form-signin-heading"><font color="white">Sign Up</font>f</h2></center>
+    <br><br>
+    <font color="#DBDCDE">{{ form.hidden_tag() }}
     {{ wtf.form_field(form.username) }}
     {{ wtf.form_field(form.email) }}
-    {{ wtf.form_field(form.password) }}
+    {{ wtf.form_field(form.password) }}</font>
+    <br>
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
   </form>
 
