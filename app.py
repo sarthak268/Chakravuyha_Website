@@ -31,9 +31,6 @@ class User(UserMixin, db.Model):
 def load_user(user_id):
     return User.query.get(int(user_id))
 
-'''@classmethod
-def is_user_name_taken(cls, username):
-	return db.session.query(db.exists().where(User.username==username)).scalar()'''
 
 class LoginForm(FlaskForm):
     username = StringField('username', validators=[InputRequired(), Length(min=4, max=15)])
@@ -83,9 +80,11 @@ def signup():
         '''if User.is_user_name_taken(form.username.data):
         	return Response.make_error_resp(msg="This username is already taken!", code=409)'''
         if User.query.filter_by(username=form.username.data).first() is not None :
-        	#flash('Username already exists. Choose another username.')
         	#return redirect(url_for('create'))
         	return '<h1>' + 'Username already exists. Choose another username.' + '</h1>'
+        if User.query.filter_by(email=form.email.data).first() is not None :
+        	return '<h1>' + 'Email-Id already exists. Choose another one.' + '</h1>'
+
         hashed_password = generate_password_hash(form.password.data, method='sha256')
         new_user = User(username=form.username.data, email=form.email.data, password=hashed_password)
         db.session.add(new_user)
