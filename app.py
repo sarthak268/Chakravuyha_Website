@@ -167,7 +167,6 @@ def signup():
         db.session.commit()
 
         return render_template('home.html', form=form)
-        #return '<h1>' + form.username.data + ' ' + form.email.data + ' ' + form.password.data + '</h1>'
 
     return render_template('signup.html', form=form)
 
