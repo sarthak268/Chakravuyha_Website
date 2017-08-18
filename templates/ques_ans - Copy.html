@@ -2,8 +2,6 @@
 <html>
 <head>
 	<link rel="stylesheet" href="static/quesans.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
 	<title>Chakravyuha | Esya 2017</title>
 	<script type="text/javascript">
 	function clear_field()
@@ -12,42 +10,7 @@
  	}
 	</script>
 </head>
-<body background="black"> <!--background="static/images/yo3.jpg"-->
-
-<div class="count-particles">
-  <span class="js-count-particles">--</span> particles
-</div>
-
-<!-- particles.js container -->
-<div id="particles-js"></div>
-
-<script src="{{url_for('static', filename='particles.js')}}"></script>
-<script src="{{url_for('static', filename='particles.min.js')}}"></script>
-<!-- scripts -->
-<!--script src="../particles.js"></script>
-<script src="js/app.js"></script-->
-
-<!-- stats.js -->
-<script>
-  var count_particles, stats, update;
-  stats = new Stats;
-  stats.setMode(0);
-  stats.domElement.style.position = 'absolute';
-  stats.domElement.style.left = '0px';
-  stats.domElement.style.top = '0px';
-  document.body.appendChild(stats.domElement);
-  count_particles = document.querySelector('.js-count-particles');
-  update = function() {
-    stats.begin();
-    stats.end();
-    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-    }
-    requestAnimationFrame(update);
-  };
-  requestAnimationFrame(update);
-</script>
-
+<body background="static/images/yo3.jpg">
 
 <br><br><br><br><br>
 
@@ -360,7 +323,6 @@
 	<br><br><br><br><br><br>
 	<br><br><br><br><br><br>
 
-<!--script src="{{url_for('static', filename='app.js')}}"></script-->
 
 </body>
 </html>
