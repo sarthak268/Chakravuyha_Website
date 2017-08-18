@@ -11,6 +11,8 @@ import os.path
 from flask.ext.scss import Scss
 #from passlib.hash import sha256_crypt
 from flask.ext.bcrypt import Bcrypt
+from flask_login import current_user
+#from api import Query
 
 bc = Bcrypt(None)
 app = Flask(__name__)
@@ -27,6 +29,7 @@ login_manager.login_view = 'login'
 array=['a','b','c','d','e','f','g','h','i','j']
 counter=[0]*10
 points=[0]
+bools=[False]*10
 
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -88,78 +91,103 @@ def qa():
 	if request.method=='POST':
 		
 		ans = request.form['answer']
-		#h = bcrypt.generate_password_hash(request.form['answer'], method='sha256')
-		#h1 = generate_password_hash(array[3],method='sha256')
+		#h1 = bcrypt.generate_password_hash('a', method='sha256')
+		h1 = generate_password_hash('e',method='sha256')
+		a = 'sha256$F7mTwQF0$b2cca448335756fae2d22f5fc4ef4519c5b472f8bffd4db07e320cfe173cfc3e'
 		b = 'sha256$xaL6YZBn$f69a2e4bf44292f7b8fec7838eb86f47ce6199474afae260b3101a5701be24cc'
 		c = 'sha256$rWLyNmM8$6066b13b14c755b3c26c82d68567b1639af739047db518634ac3f9c8e0e1df1d'
 		d = 'sha256$z6ponoZu$e519e26ef06c2e7461c381ceee785f675f2b133b23dccd4f9813c486cf7637e9'
+		e = 'sha256$nXacAlxW$65041ae92ecd2a80890c218d868f65fd688f5409bf61b81bb9bf8b31d96188cd'
 		
+		#user = User.query.filter_by(username=current_user.username).first()
+
 		if request.form.get('1'):
-			#if ans=='a':
-			a1 = ans
-			counter[0]+=1
-			if counter[0]==1:
-				points[0]+=1
+			bools[0]=True
+			if check_password_hash(a,request.form['answer']):
+				counter[0]+=1
+				if counter[0]==1:
+					points[0]+=1
+					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
+					db.session.commit()
 
 		elif request.form.get('2'):
-			#if ans==array[1]:
+			bools[1]=True
 			if check_password_hash(b,request.form['answer']):
 				counter[1]+=1
 				if counter[1]==1:
 					points[0]+=1
+					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
+					db.session.commit()
 
 		elif request.form.get('3'):
-			#if ans==array[2]:
+			bools[2]=True
 			if check_password_hash(c,request.form['answer']):
 				counter[2]+=1
 				if counter[2]==1:
 					points[0]+=1
+					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
+					db.session.commit()
 
 		elif request.form.get('4'):
-			#if ans==array[3]:
+			bools[3]=True
 			if check_password_hash(d,request.form['answer']):
 				counter[3]+=1
 				if counter[3]==1:
 					points[0]+=1
+					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
+					db.session.commit()
 
 		elif request.form.get('5'):
-			if ans==array[4]:
+			bools[1]=True
+			if check_password_hash(e,request.form['answer']):
 				counter[4]+=1
 				if counter[4]==1:
 					points[0]+=1
+					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
+					db.session.commit()
 
 		elif request.form.get('6'):
 			if ans==array[5]:
 				counter[5]+=1
 				if counter[5]==1:
 					points[0]+=1
+					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
+					db.session.commit()
 
 		elif request.form.get('7'):
 			if ans==array[6]:
 				counter[6]+=1
 				if counter[6]==1:
 					points[0]+=1
+					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
+					db.session.commit()
 
 		elif request.form.get('8'):
 			if ans==array[7]:
 				counter[7]+=1
 				if counter[7]==1:
 					points[0]+=1
+					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
+					db.session.commit()
 
 		elif request.form.get('9'):
 			if ans==array[8]:
 				counter[7]+=1
 				if counter[7]==1:
 					points[0]+=1
+					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
+					db.session.commit()
 
 		elif request.form.get('10'):
 			if ans==array[9]:
 				counter[8]+=1
 				if counter[8]==1:
 					points[0]+=1
+					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
+					db.session.commit()
 
 		return '<h1>' + 'Your Score is : ' + str(points[0]) +'</h1>'
-		#return ans
+		#return h1
 		#return '<h1>'+ans+'</h1>'
 	return render_template('ques_ans.html')
 
@@ -186,7 +214,7 @@ def signup():
 @app.route('/dashboard')
 @login_required
 def dashboard():
-    return render_template('dashboard.html', name=current_user.username)
+    return render_template('dashboard.html', name=current_user.username, check_list=counter, point_list=points, check_bool=bools)
 
 @app.route('/logout')
 @login_required

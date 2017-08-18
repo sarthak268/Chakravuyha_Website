@@ -9,6 +9,10 @@ Dashboard
 <link rel="stylesheet" href="{{url_for('.static', filename='dashboard.css')}}">
 {% endblock %}
 
+{% block code %}
+   {{js|safe}}
+{% endblock code %}
+
 {% block content %}
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
@@ -47,8 +51,7 @@ Dashboard
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Welcome, {{ name }}</h1>
-
-          
+          <h2 class="sub-header">Your Score : {{ point_list[0] }}
           <h2 class="sub-header">OVERVIEW</h2>
           <!--h2 class="sub-header">
           </h2-->
@@ -65,17 +68,31 @@ Dashboard
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td>Not Attempted Yet</td>
+                  <td>
+                    {{ point_list[0] }}
+                  </td>
                   <td>0</td>
                 </tr>
                 <tr>
                   <td>2</td>
-                  <td>Not Attempted Yet</td>
+                  <td>
+                   {% if check_list[1]>=1 %}
+                   Correct answer
+                   {% endif %}
+                  </td>
                   <td>0</td>
                 </tr>
                 <tr>
                   <td>3</td>
-                  <td>Not Attempted Yet</td>
+                  <td>
+                    {% if check_list[2]>=1 %}
+                   Correct answer
+                   {% elif check_bool[2]==True %}
+                   Wrong Answer
+                   {% else %}
+                   Not Attempted Yet
+                   {% endif %}
+                  </td>
                   <td>0</td>
                 </tr>
                 <tr>
