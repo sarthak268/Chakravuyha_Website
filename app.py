@@ -439,29 +439,29 @@ def dashboard():
 	if current_user.q8 ==1:
 		sc += 5
 	if current_user.q9 ==1:
-		sc += 5
+		sc += 10
 	if current_user.q10 ==1:
-		sc += 5
+		sc += 10
 	if current_user.q11 ==1:
-		sc += 5
+		sc += 10
 	if current_user.q12 ==1:
-		sc += 5
+		sc += 10
 	if current_user.q13 ==1:
-		sc += 5
+		sc += 10
 	if current_user.q14 ==1:
-		sc += 5
+		sc += 10
 	if current_user.q15 ==1:
-		sc += 5
+		sc += 10
 	if current_user.q16 ==1:
-		sc += 5
+		sc += 15
 	if current_user.q17 ==1:
-		sc += 5
+		sc += 15
 	if current_user.q18 ==1:
-		sc += 5
+		sc += 15
 	if current_user.q19 ==1:
-		sc += 5
+		sc += 15
 	if current_user.q20 ==1:
-		sc += 5
+		sc += 15
 	current_user.score = sc
 	return render_template('dashboard.html', name=current_user.username, ques1=current_user.q1, ques2=current_user.q2, ques3=current_user.q3, ques4=current_user.q4, ques5=current_user.q5, ques6=current_user.q6, ques7=current_user.q7, ques8=current_user.q8, ques9=current_user.q9, ques10=current_user.q10, ques11=current_user.q11, ques12=current_user.q12, ques13=current_user.q13, ques14=current_user.q14, ques15=current_user.q15, ques16=current_user.q16, ques17=current_user.q17, ques18=current_user.q18, ques19=current_user.q19, ques20=current_user.q20, scores=current_user.score)
 
