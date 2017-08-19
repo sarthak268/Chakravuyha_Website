@@ -116,17 +116,18 @@ def qa():
 		
 		if request.form.get('1'):
 			user = User.query.filter_by(username=current_user.username)
-			if current_user.q1!=1:
-				user = User.query.filter_by(username=current_user.username).update(dict(q1=-1))
+			if current_user.q2 != 1:
+				user = User.query.filter_by(username=current_user.username).update(dict(q2=-1))
 				db.session.commit()
 			if check_password_hash(b,request.form['answer']):
-				user = User.query.filter_by(username=current_user.username).update(dict(q1=1))
+				user = User.query.filter_by(username=current_user.username).update(dict(q2=1))
 				db.session.commit()
 				if current_user.q1==1:
+					user = User.query.filter_by(username=current_user.username)
 					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
 					db.session.commit()
-				return 'Correct Answer'
-			return 'Wrong Answer'
+				return render_template('qa_return.html')
+			return render_template('qa_return2.html')
 
 		elif request.form.get('2'):
 			user = User.query.filter_by(username=current_user.username)
