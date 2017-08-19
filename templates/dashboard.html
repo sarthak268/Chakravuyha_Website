@@ -9,10 +9,6 @@ Dashboard
 <link rel="stylesheet" href="{{url_for('.static', filename='dashboard.css')}}">
 {% endblock %}
 
-{% block code %}
-   {{js|safe}}
-{% endblock code %}
-
 {% block content %}
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
@@ -35,11 +31,6 @@ Dashboard
       </div>
     </nav>
 
-
-    <!--div>{% set testing ="yes" %}
-    {{ testing }}</div-->
-
-
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
@@ -52,10 +43,10 @@ Dashboard
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Welcome, {{ name }}</h1>
           <h2 class="sub-header">Your Score : {{ scores }}
-          <h2 class="sub-header">OVERVIEW</h2>
+          
           <!--h2 class="sub-header">
           </h2-->
-          <div class="table-responsive">
+          <div class="table-responsive" style="font-weight: bold;">
             <table class="table table-striped">
               <thead>
                 <tr>
@@ -69,10 +60,10 @@ Dashboard
                 <tr>
                   <td>1</td>
                   <td>
-                    {% if ques1==1 %}
-                   Correct Answer
+                   {% if ques1==1 %}
+                   <font color="green">Correct Answer</font>
                    {% elif ques1==-1 %}
-                   Wrong Answer
+                   <font color="red">Wrong Answer</font>
                    {% else %}
                    Not Yet Attempted
                    {% endif %}

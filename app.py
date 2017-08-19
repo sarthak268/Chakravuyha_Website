@@ -125,8 +125,8 @@ def qa():
 				if current_user.q1==1:
 					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
 					db.session.commit()
-				return 'Correct Answer'
-			return 'Wrong Answer'
+				return render_template('qa_return.html')
+			return render_template('qa_return2.html')
 
 		elif request.form.get('2'):
 			user = User.query.filter_by(username=current_user.username)
