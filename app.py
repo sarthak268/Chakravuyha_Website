@@ -27,9 +27,9 @@ login_manager.init_app(app)
 login_manager.login_view = 'login'
 
 array=['a','b','c','d','e','f','g','h','i','j']
-counter=[0]*10
-points=[0]
-bools=[False]*10
+#counter=[0]*10
+#points=[0]
+#bools=[False]*10
 
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -37,6 +37,27 @@ class User(UserMixin, db.Model):
     email = db.Column(db.String(50), unique=True)
     password = db.Column(db.String(80))
     score = db.Column(db.Integer)
+    q1 = db.Column(db.Integer)
+    q2 = db.Column(db.Integer)
+    q3 = db.Column(db.Integer)
+    q4 = db.Column(db.Integer)
+    q5 = db.Column(db.Integer)
+    q6 = db.Column(db.Integer)
+    q7 = db.Column(db.Integer)
+    q8 = db.Column(db.Integer)
+    q9 = db.Column(db.Integer)
+    q10 = db.Column(db.Integer)
+    q11 = db.Column(db.Integer)
+    q12 = db.Column(db.Integer)
+    q13 = db.Column(db.Integer)
+    q14 = db.Column(db.Integer)
+    q15 = db.Column(db.Integer)
+    q16 = db.Column(db.Integer)
+    q17 = db.Column(db.Integer)
+    q18 = db.Column(db.Integer)
+    q19 = db.Column(db.Integer)
+    q20 = db.Column(db.Integer)
+	
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -60,11 +81,6 @@ def index():
 @app.route('/home')
 def home():
     return render_template('home.html')
-
-@app.route('/leaderboard')
-def leaderboard():
-    return render_template('leaderboard.html')
-
 
 @app.route('/xy')
 def xy():
@@ -91,104 +107,295 @@ def qa():
 	if request.method=='POST':
 		
 		ans = request.form['answer']
-		#h1 = bcrypt.generate_password_hash('a', method='sha256')
-		h1 = generate_password_hash('e',method='sha256')
+		user = User.query.filter_by(username=current_user.username).first()
 		a = 'sha256$F7mTwQF0$b2cca448335756fae2d22f5fc4ef4519c5b472f8bffd4db07e320cfe173cfc3e'
 		b = 'sha256$xaL6YZBn$f69a2e4bf44292f7b8fec7838eb86f47ce6199474afae260b3101a5701be24cc'
 		c = 'sha256$rWLyNmM8$6066b13b14c755b3c26c82d68567b1639af739047db518634ac3f9c8e0e1df1d'
 		d = 'sha256$z6ponoZu$e519e26ef06c2e7461c381ceee785f675f2b133b23dccd4f9813c486cf7637e9'
 		e = 'sha256$nXacAlxW$65041ae92ecd2a80890c218d868f65fd688f5409bf61b81bb9bf8b31d96188cd'
 		
-		#user = User.query.filter_by(username=current_user.username).first()
-
 		if request.form.get('1'):
-			bools[0]=True
-			if check_password_hash(a,request.form['answer']):
-				counter[0]+=1
-				if counter[0]==1:
-					points[0]+=1
+			user = User.query.filter_by(username=current_user.username)
+			if current_user.q1!=1:
+				user = User.query.filter_by(username=current_user.username).update(dict(q1=-1))
+				db.session.commit()
+			if check_password_hash(b,request.form['answer']):
+				user = User.query.filter_by(username=current_user.username).update(dict(q1=1))
+				db.session.commit()
+				if current_user.q1==1:
 					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
 					db.session.commit()
+				return 'Correct Answer'
+			return 'Wrong Answer'
 
 		elif request.form.get('2'):
-			bools[1]=True
+			user = User.query.filter_by(username=current_user.username)
+			if current_user.q2 != 1:
+				user = User.query.filter_by(username=current_user.username).update(dict(q2=-1))
+				db.session.commit()
 			if check_password_hash(b,request.form['answer']):
-				counter[1]+=1
-				if counter[1]==1:
-					points[0]+=1
+				user = User.query.filter_by(username=current_user.username).update(dict(q2=1))
+				db.session.commit()
+				if current_user.q1==1:
+					user = User.query.filter_by(username=current_user.username)
 					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
 					db.session.commit()
+				return render_template('qa_return.html')
+			return render_template('qa_return2.html')
 
 		elif request.form.get('3'):
-			bools[2]=True
-			if check_password_hash(c,request.form['answer']):
-				counter[2]+=1
-				if counter[2]==1:
-					points[0]+=1
+			user = User.query.filter_by(username=current_user.username)
+			if current_user.q3!=1:
+				user = User.query.filter_by(username=current_user.username).update(dict(q3=-1))
+				db.session.commit()
+			if check_password_hash(b,request.form['answer']):
+				user = User.query.filter_by(username=current_user.username).update(dict(q3=1))
+				db.session.commit()
+				if current_user.q3==1:
 					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
 					db.session.commit()
+				return render_template('qa_return.html')
+			return render_template('qa_return2.html')
 
 		elif request.form.get('4'):
-			bools[3]=True
-			if check_password_hash(d,request.form['answer']):
-				counter[3]+=1
-				if counter[3]==1:
-					points[0]+=1
+			user = User.query.filter_by(username=current_user.username)
+			if current_user.q4!=1:
+				user = User.query.filter_by(username=current_user.username).update(dict(q4=-1))
+				db.session.commit()
+			if check_password_hash(b,request.form['answer']):
+				user = User.query.filter_by(username=current_user.username).update(dict(q4=1))
+				db.session.commit()
+				if current_user.q4==1:
 					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
 					db.session.commit()
+				return render_template('qa_return.html')
+			return render_template('qa_return2.html')
 
 		elif request.form.get('5'):
-			bools[1]=True
-			if check_password_hash(e,request.form['answer']):
-				counter[4]+=1
-				if counter[4]==1:
-					points[0]+=1
+			user = User.query.filter_by(username=current_user.username)
+			if current_user.q5!=1:
+				user = User.query.filter_by(username=current_user.username).update(dict(q5=-1))
+				db.session.commit()
+			if check_password_hash(b,request.form['answer']):
+				user = User.query.filter_by(username=current_user.username).update(dict(q5=1))
+				db.session.commit()
+				if current_user.q5==1:
 					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
 					db.session.commit()
+				return render_template('qa_return.html')
+			return render_template('qa_return2.html')
 
 		elif request.form.get('6'):
-			if ans==array[5]:
-				counter[5]+=1
-				if counter[5]==1:
-					points[0]+=1
+			user = User.query.filter_by(username=current_user.username)
+			if current_user.q6!=1:
+				user = User.query.filter_by(username=current_user.username).update(dict(q6=-1))
+				db.session.commit()
+			if check_password_hash(b,request.form['answer']):
+				user = User.query.filter_by(username=current_user.username).update(dict(q6=1))
+				db.session.commit()
+				if current_user.q6==1:
 					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
 					db.session.commit()
+				return render_template('qa_return.html')
+			return render_template('qa_return2.html')
 
 		elif request.form.get('7'):
-			if ans==array[6]:
-				counter[6]+=1
-				if counter[6]==1:
-					points[0]+=1
+			user = User.query.filter_by(username=current_user.username)
+			if current_user.q7!=1:
+				user = User.query.filter_by(username=current_user.username).update(dict(q7=-1))
+				db.session.commit()
+			if check_password_hash(b,request.form['answer']):
+				user = User.query.filter_by(username=current_user.username).update(dict(q7=1))
+				db.session.commit()
+				if current_user.q7==1:
 					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
 					db.session.commit()
+				return render_template('qa_return.html')
+			return render_template('qa_return2.html')
 
 		elif request.form.get('8'):
-			if ans==array[7]:
-				counter[7]+=1
-				if counter[7]==1:
-					points[0]+=1
+			user = User.query.filter_by(username=current_user.username)
+			if current_user.q8!=1:
+				user = User.query.filter_by(username=current_user.username).update(dict(q8=-1))
+				db.session.commit()
+			if check_password_hash(b,request.form['answer']):
+				user = User.query.filter_by(username=current_user.username).update(dict(q8=1))
+				db.session.commit()
+				if current_user.q8==1:
 					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
 					db.session.commit()
+				return render_template('qa_return.html')
+			return render_template('qa_return2.html')
 
 		elif request.form.get('9'):
-			if ans==array[8]:
-				counter[7]+=1
-				if counter[7]==1:
-					points[0]+=1
+			user = User.query.filter_by(username=current_user.username)
+			if current_user.q9!=1:
+				user = User.query.filter_by(username=current_user.username).update(dict(q9=-1))
+				db.session.commit()
+			if check_password_hash(b,request.form['answer']):
+				user = User.query.filter_by(username=current_user.username).update(dict(q9=1))
+				db.session.commit()
+				if current_user.q9==1:
 					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
 					db.session.commit()
+				return render_template('qa_return.html')
+			return render_template('qa_return2.html')
+
 
 		elif request.form.get('10'):
-			if ans==array[9]:
-				counter[8]+=1
-				if counter[8]==1:
-					points[0]+=1
+			user = User.query.filter_by(username=current_user.username)
+			if current_user.q10!=1:
+				user = User.query.filter_by(username=current_user.username).update(dict(q10=-1))
+				db.session.commit()
+			if check_password_hash(b,request.form['answer']):
+				user = User.query.filter_by(username=current_user.username).update(dict(q10=1))
+				db.session.commit()
+				if current_user.q10==1:
 					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
 					db.session.commit()
+				return render_template('qa_return.html')
+			return render_template('qa_return2.html')
 
-		return '<h1>' + 'Your Score is : ' + str(points[0]) +'</h1>'
-		#return h1
-		#return '<h1>'+ans+'</h1>'
+		elif request.form.get('11'):
+			user = User.query.filter_by(username=current_user.username)
+			if current_user.q11!=1:
+				user = User.query.filter_by(username=current_user.username).update(dict(q11=-1))
+				db.session.commit()
+			if check_password_hash(b,request.form['answer']):
+				user = User.query.filter_by(username=current_user.username).update(dict(q11=1))
+				db.session.commit()
+				if current_user.q11==1:
+					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
+					db.session.commit()
+				return render_template('qa_return.html')
+			return render_template('qa_return2.html')
+			
+		elif request.form.get('12'):
+			user = User.query.filter_by(username=current_user.username)
+			if current_user.q12!=1:
+				user = User.query.filter_by(username=current_user.username).update(dict(q12=-1))
+				db.session.commit()
+			if check_password_hash(b,request.form['answer']):
+				user = User.query.filter_by(username=current_user.username).update(dict(q12=1))
+				db.session.commit()
+				if current_user.q12==1:
+					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
+					db.session.commit()
+				return render_template('qa_return.html')
+			return render_template('qa_return2.html')
+
+		elif request.form.get('13'):
+			user = User.query.filter_by(username=current_user.username)
+			if current_user.q13!=1:
+				user = User.query.filter_by(username=current_user.username).update(dict(q13=-1))
+				db.session.commit()
+			if check_password_hash(b,request.form['answer']):
+				user = User.query.filter_by(username=current_user.username).update(dict(q13=1))
+				db.session.commit()
+				if current_user.q13==1:
+					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
+					db.session.commit()
+				return render_template('qa_return.html')
+			return render_template('qa_return2.html')
+
+		elif request.form.get('14'):
+			user = User.query.filter_by(username=current_user.username)
+			if current_user.q14!=1:
+				user = User.query.filter_by(username=current_user.username).update(dict(q14=-1))
+				db.session.commit()
+			if check_password_hash(b,request.form['answer']):
+				user = User.query.filter_by(username=current_user.username).update(dict(q14=1))
+				db.session.commit()
+				if current_user.q14==1:
+					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
+					db.session.commit()
+				return render_template('qa_return.html')
+			return render_template('qa_return2.html')
+
+		elif request.form.get('15'):
+			user = User.query.filter_by(username=current_user.username)
+			if current_user.q15!=1:
+				user = User.query.filter_by(username=current_user.username).update(dict(q15=-1))
+				db.session.commit()
+			if check_password_hash(b,request.form['answer']):
+				user = User.query.filter_by(username=current_user.username).update(dict(q15=1))
+				db.session.commit()
+				if current_user.q15==1:
+					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
+					db.session.commit()
+				return render_template('qa_return.html')
+			return render_template('qa_return2.html')
+
+		elif request.form.get('16'):
+			user = User.query.filter_by(username=current_user.username)
+			if current_user.q16!=1:
+				user = User.query.filter_by(username=current_user.username).update(dict(q16=-1))
+				db.session.commit()
+			if check_password_hash(b,request.form['answer']):
+				user = User.query.filter_by(username=current_user.username).update(dict(q16=1))
+				db.session.commit()
+				if current_user.q16==1:
+					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
+					db.session.commit()
+				return render_template('qa_return.html')
+			return render_template('qa_return2.html')
+
+		elif request.form.get('17'):
+			user = User.query.filter_by(username=current_user.username)
+			if current_user.q17!=1:
+				user = User.query.filter_by(username=current_user.username).update(dict(q17=-1))
+				db.session.commit()
+			if check_password_hash(b,request.form['answer']):
+				user = User.query.filter_by(username=current_user.username).update(dict(q17=1))
+				db.session.commit()
+				if current_user.q17==1:
+					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
+					db.session.commit()
+				return render_template('qa_return.html')
+			return render_template('qa_return2.html')
+
+		elif request.form.get('18'):
+			user = User.query.filter_by(username=current_user.username)
+			if current_user.q18!=1:
+				user = User.query.filter_by(username=current_user.username).update(dict(q18=-1))
+				db.session.commit()
+			if check_password_hash(b,request.form['answer']):
+				user = User.query.filter_by(username=current_user.username).update(dict(q18=1))
+				db.session.commit()
+				if current_user.q18==1:
+					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
+					db.session.commit()
+				return render_template('qa_return.html')
+			return render_template('qa_return2.html')
+
+		elif request.form.get('19'):
+			user = User.query.filter_by(username=current_user.username)
+			if current_user.q19!=1:
+				user = User.query.filter_by(username=current_user.username).update(dict(q19=-1))
+				db.session.commit()
+			if check_password_hash(b,request.form['answer']):
+				user = User.query.filter_by(username=current_user.username).update(dict(q19=1))
+				db.session.commit()
+				if current_user.q19==1:
+					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
+					db.session.commit()
+				return render_template('qa_return.html')
+			return render_template('qa_return2.html')
+
+		elif request.form.get('20'):
+			user = User.query.filter_by(username=current_user.username)
+			if current_user.q20!=1:
+				user = User.query.filter_by(username=current_user.username).update(dict(q20=-1))
+				db.session.commit()
+			if check_password_hash(b,request.form['answer']):
+				user = User.query.filter_by(username=current_user.username).update(dict(q20=1))
+				db.session.commit()
+				if current_user.q20==1:
+					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
+					db.session.commit()
+				return render_template('qa_return.html')
+			return render_template('qa_return2.html')
+
 	return render_template('ques_ans.html')
 
 @app.route('/signup', methods=['GET', 'POST'])
@@ -203,7 +410,7 @@ def signup():
         	return '<h1>' + 'Email-Id already exists. Choose another one.' + '</h1>'
 
         hashed_password = generate_password_hash(form.password.data, method='sha256')
-        new_user = User(username=form.username.data, email=form.email.data, password=hashed_password, score=0)
+        new_user = User(username=form.username.data, email=form.email.data, password=hashed_password, score=0)# q1=0, q2=0, q3=0, q4=0, q5=0, q6=0, q7=0, q8=0, q9=0, q10=0, q11=0, q12=0, q13=0, q14=0, q15=0, q16=0, q17=0, q18=0, q19=0, q20=0)
         db.session.add(new_user)
         db.session.commit()
 
@@ -214,7 +421,49 @@ def signup():
 @app.route('/dashboard')
 @login_required
 def dashboard():
-    return render_template('dashboard.html', name=current_user.username, check_list=counter, point_list=points, check_bool=bools)
+	sc = 0
+	if current_user.q1 == 1:
+		sc += 5
+	if current_user.q2 == 1:
+		sc += 5
+	if current_user.q3 ==1:
+		sc += 5
+	if current_user.q4 ==1:
+		sc += 5
+	if current_user.q5 ==1:
+		sc += 5
+	if current_user.q6 ==1:
+		sc += 5
+	if current_user.q7 ==1:
+		sc += 5
+	if current_user.q8 ==1:
+		sc += 5
+	if current_user.q9 ==1:
+		sc += 5
+	if current_user.q10 ==1:
+		sc += 5
+	if current_user.q11 ==1:
+		sc += 5
+	if current_user.q12 ==1:
+		sc += 5
+	if current_user.q13 ==1:
+		sc += 5
+	if current_user.q14 ==1:
+		sc += 5
+	if current_user.q15 ==1:
+		sc += 5
+	if current_user.q16 ==1:
+		sc += 5
+	if current_user.q17 ==1:
+		sc += 5
+	if current_user.q18 ==1:
+		sc += 5
+	if current_user.q19 ==1:
+		sc += 5
+	if current_user.q20 ==1:
+		sc += 5
+	current_user.score = sc
+	return render_template('dashboard.html', name=current_user.username, ques1=current_user.q1, ques2=current_user.q2, ques3=current_user.q3, ques4=current_user.q4, ques5=current_user.q5, ques6=current_user.q6, ques7=current_user.q7, ques8=current_user.q8, ques9=current_user.q9, ques10=current_user.q10, ques11=current_user.q11, ques12=current_user.q12, ques13=current_user.q13, ques14=current_user.q14, ques15=current_user.q15, ques16=current_user.q16, ques17=current_user.q17, ques18=current_user.q18, ques19=current_user.q19, ques20=current_user.q20, scores=current_user.score)
 
 @app.route('/logout')
 @login_required

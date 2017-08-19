@@ -51,7 +51,7 @@ Dashboard
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Welcome, {{ name }}</h1>
-          <h2 class="sub-header">Your Score : {{ point_list[0] }}
+          <h2 class="sub-header">Your Score : {{ scores }}
           <h2 class="sub-header">OVERVIEW</h2>
           <!--h2 class="sub-header">
           </h2-->
@@ -69,143 +69,383 @@ Dashboard
                 <tr>
                   <td>1</td>
                   <td>
-                    {{ point_list[0] }}
+                    {% if ques1==1 %}
+                   Correct Answer
+                   {% elif ques1==-1 %}
+                   Wrong Answer
+                   {% else %}
+                   Not Yet Attempted
+                   {% endif %}
                   </td>
-                  <td>0</td>
+                  <td>
+                    {% if ques1==1 %}
+                    5
+                    {% else %}
+                    0
+                    {% endif %}
+                  </td>
                 </tr>
                 <tr>
                   <td>2</td>
                   <td>
-                   {% if check_list[1]>=1 %}
-                   Correct answer
-                   {% endif %}
-                  </td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>
-                    {% if check_list[2]>=1 %}
-                   Correct answer
-                   {% elif check_bool[2]==True %}
+                   {% if ques2==1 %}
+                   Correct Answer
+                   {% elif ques2==-1 %}
                    Wrong Answer
                    {% else %}
-                   Not Attempted Yet
+                   Not Yet Attempted
                    {% endif %}
                   </td>
-                  <td>0</td>
+                  <td>
+                    {% if ques2==1 %}
+                    5
+                    {% else %}
+                    0
+                    {% endif %}
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>
+                  {% if ques3==1 %}
+                   Correct Answer
+                   {% elif ques3==-1 %}
+                   Wrong Answer
+                   {% else %}
+                   Not Yet Attempted
+                   {% endif %}
+                  </td>
+                  <td>
+                    {% if ques3==1 %}
+                    5
+                    {% else %}
+                    0
+                    {% endif %}
+                  </td>
                 </tr>
                 <tr>
                   <td>4</td>
-                  <td>Not Attempted Yet</td>
-                  <td>0</td>
+                  <td>
+                    {% if ques4==1 %}
+                   Correct Answer
+                   {% elif ques4==-1 %}
+                   Wrong Answer
+                   {% else %}
+                   Not Yet Attempted
+                   {% endif %}
+                  </td>
+                  <td>
+                    {% if ques4==1 %}
+                    5
+                    {% else %}
+                    0
+                    {% endif %}
+                  </td>
                 </tr>
                 <tr>
                   <td>5</td>
-                  <td>Not Attempted Yet</td>
-                  <td>0</td>
+                  <td>
+                    {% if ques5==1 %}
+                   Correct Answer
+                   {% elif ques5==-1 %}
+                   Wrong Answer
+                   {% else %}
+                   Not Yet Attempted
+                   {% endif %}
+                  </td>
+                  <td>
+                    {% if ques5==1 %}
+                    5
+                    {% else %}
+                    0                 
+                    {% endif %}
+                  </td>
                 </tr>
                 <tr>
                   <td>6</td>
-                  <td>Not Attempted Yet</td>
-                  <td>0</td>
+                  <td>
+                    {% if ques6==1 %}
+                   Correct Answer
+                   {% elif ques6==-1 %}
+                   Wrong Answer
+                   {% else %}
+                   Not Yet Attempted
+                   {% endif %}
+                  </td>
+                  <td>
+                    {% if ques6==1 %}
+                    5
+                    {% else %}
+                    0
+                    {% endif %}
+                  </td>
                 </tr>
                 <tr>
                   <td>7</td>
-                  <td>Not Attempted Yet</td>
-                  <td>0</td>
+                  <td>
+                    {% if ques7==1 %}
+                   Correct Answer
+                   {% elif ques7==-1 %}
+                   Wrong Answer
+                   {% else %}
+                   Not Yet Attempted
+                   {% endif %}
+                  </td>
+                  <td>
+                    {% if ques7==1 %}
+                    5
+                    {% else %}
+                    0
+                    {% endif %}
+                  </td>
                 </tr>
                 <tr>
                   <td>8</td>
-                  <td>Not Attempted Yet</td>
-                  <td>0</td>
+                  <td>
+                    {% if ques8==1 %}
+                   Correct Answer
+                   {% elif ques8==-1 %}
+                   Wrong Answer
+                   {% else %}
+                   Not Yet Attempted
+                   {% endif %}
+                  </td>
+                  <td>
+                    {% if ques8==1 %}
+                    5
+                    {% else %}
+                    0
+                    {% endif %}
+                  </td>
                 </tr>
                 <tr>
                   <td>9</td>
-                  <td>Not Attempted Yet</td>
-                  <td>0</td>
+                  <td>
+                    {% if ques9==1 %}
+                   Correct Answer
+                   {% elif ques9==-1 %}
+                   Wrong Answer
+                   {% else %}
+                   Not Yet Attempted
+                   {% endif %}
+                  </td>
+                  <td>
+                    {% if ques9==1 %}
+                    5
+                    {% else %}
+                    0
+                    {% endif %}
+                  </td>
                 </tr>
                 <tr>
                   <td>10</td>
-                  <td>Not Attempted Yet</td>
-                  <td>0</td>
+                  <td>
+                    {% if ques10==1 %}
+                   Correct Answer
+                   {% elif ques10==-1 %}
+                   Wrong Answer
+                   {% else %}
+                   Not Yet Attempted
+                   {% endif %}
+                  </td>
+                  <td>
+                    {% if ques10==1 %}
+                    5
+                    {% else %}
+                    0
+                    {% endif %}
+                  </td>
                 </tr>
                 <tr>
                   <td>11</td>
-                  <td>Not Attempted Yet</td>
-                  <td>0</td>
+                  <td>
+                    {% if ques11==1 %}
+                   Correct Answer
+                   {% elif ques11==-1 %}
+                   Wrong Answer
+                   {% else %}
+                   Not Yet Attempted
+                   {% endif %}
+                  </td>
+                  <td>
+                    {% if ques11==1 %}
+                    5
+                    {% else %}
+                    0
+                    {% endif %}
+                  </td>
                 </tr>
                 <tr>
                   <td>12</td>
-                  <td>Not Attempted Yet</td>
-                  <td>0</td>
+                  <td>
+                    {% if ques12==1 %}
+                   Correct Answer
+                   {% elif ques12==-1 %}
+                   Wrong Answer
+                   {% else %}
+                   Not Yet Attempted
+                   {% endif %}
+                  </td>
+                  <td>
+                    {% if ques12==1 %}
+                    5
+                    {% else %}
+                    0
+                    {% endif %}
+                  </td>
                 </tr>
                 <tr>
                   <td>13</td>
-                  <td>Not Attempted Yet</td>
-                  <td>0</td>
+                  <td>
+                    {% if ques13==1 %}
+                   Correct Answer
+                   {% elif ques13==-1 %}
+                   Wrong Answer
+                   {% else %}
+                   Not Yet Attempted
+                   {% endif %}
+                  </td>
+                  <td>
+                    {% if ques13==1 %}
+                    5
+                    {% else %}
+                    0
+                    {% endif %}
+                  </td>
                 </tr>
                 <tr>
                   <td>14</td>
-                  <td>Not Attempted Yet</td>
-                  <td>0</td>
+                  <td>
+                    {% if ques14==1 %}
+                   Correct Answer
+                   {% elif ques14==-1 %}
+                   Wrong Answer
+                   {% else %}
+                   Not Yet Attempted
+                   {% endif %}
+                  </td>
+                  <td>
+                    {% if ques14==1 %}
+                    5
+                    {% else %}
+                    0
+                    {% endif %}
+                  </td>
                 </tr>
                 <tr>
                   <td>15</td>
-                  <td>Not Attempted Yet</td>
-                  <td>0</td>
+                  <td>
+                    {% if ques15==1 %}
+                   Correct Answer
+                   {% elif ques15==-1 %}
+                   Wrong Answer
+                   {% else %}
+                   Not Yet Attempted
+                   {% endif %}
+                  </td>
+                  <td>
+                    {% if ques15==1 %}
+                    5
+                    {% else %}
+                    0
+                    {% endif %}
+                  </td>
                 </tr>
                 <tr>
                   <td>16</td>
-                  <td>Not Attempted Yet</td>
-                  <td>0</td>
+                  <td>
+                    {% if ques16==1 %}
+                   Correct Answer
+                   {% elif ques16==-1 %}
+                   Wrong Answer
+                   {% else %}
+                   Not Yet Attempted
+                   {% endif %}
+                  </td>
+                  <td>
+                    {% if ques16==1 %}
+                    5
+                    {% else %}
+                    0
+                    {% endif %}
+                  </td>
                 </tr>
                 <tr>
                   <td>17</td>
-                  <td>Not Attempted Yet</td>
-                  <td>0</td>
+                  <td>
+                    {% if ques17==1 %}
+                   Correct Answer
+                   {% elif ques17==-1 %}
+                   Wrong Answer
+                   {% else %}
+                   Not Yet Attempted
+                   {% endif %}
+                  </td>
+                  <td>
+                    {% if ques17==1 %}
+                    5
+                    {% else %}
+                    0
+                    {% endif %}
+                  </td>
                 </tr>
                 <tr>
                   <td>18</td>
-                  <td>Not Attempted Yet</td>
-                  <td>0</td>
+                  <td>
+                    {% if ques18==1 %}
+                   Correct Answer
+                   {% elif ques18==-1 %}
+                   Wrong Answer
+                   {% else %}
+                   Not Yet Attempted
+                   {% endif %}
+                  </td>
+                  <td>
+                    {% if ques18==1 %}
+                    5
+                    {% else %}
+                    0
+                    {% endif %}
+                  </td>
                 </tr>
                 <tr>
                   <td>19</td>
-                  <td>Not Attempted Yet</td>
-                  <td>0</td>
+                  <td>
+                    {% if ques19==1 %}
+                   Correct Answer
+                   {% elif ques19==-1 %}
+                   Wrong Answer
+                   {% else %}
+                   Not Yet Attempted
+                   {% endif %}
+                  </td>
+                  <td>
+                    {% if ques19==1 %}
+                    5
+                    {% else %}
+                    0
+                    {% endif %}
+                  </td>
                 </tr>
                 <tr>
                   <td>20</td>
-                  <td>Not Attempted Yet</td>
-                  <td>0</td>
+                  <td>
+                    {% if ques20==1 %}
+                   Correct Answer
+                   {% elif ques20==-1 %}
+                   Wrong Answer
+                   {% else %}
+                   Not Yet Attempted
+                   {% endif %}
+                  </td>
+                  <td>
+                    {% if ques20==1 %}
+                    5
+                    {% else %}
+                    0
+                    {% endif %}
+                  </td>
                 </tr>
-                <tr>
-                  <td>21</td>
-                  <td>Not Attempted Yet</td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>22</td>
-                  <td>Not Attempted Yet</td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>23</td>
-                  <td>Not Attempted Yet</td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>24</td>
-                  <td>Not Attempted Yet</td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>25</td>
-                  <td>Not Attempted Yet</td>
-                  <td>0</td>
-                </tr>
-
               </tbody>
             </table>
           </div>
