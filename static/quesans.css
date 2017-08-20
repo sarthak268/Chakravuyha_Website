@@ -4,6 +4,10 @@
     top: 100px;
     left: 450px;
     background-color: rgba(0, 0, 0, 0.1);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition-delay: 0.5s;
+    position: fixed;
 }
 
 body {
@@ -18,6 +22,11 @@ body {
   text-align: center;
   padding: 0;
   margin: 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition-delay: 0.5s;
+  position: fixed;
+  position: fixed;
 }
 .nav li {
   font-family: 'Oswald', sans-serif;
@@ -25,23 +34,39 @@ body {
   line-height: 40px;
   height: 40px;
   border-bottom: 1px solid #888;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition-delay: 0.5s;
+  position: fixed;
+  position: fixed;
 }
  
 .nav a {
   text-decoration: none;
   color: #fff;
   display: block;
-  transition: .3s background-color;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition-delay: 0.5s;
+  position: fixed;
 }
  
 .nav a:hover {
   background-color: #005f5f;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition-delay: 0.5s;
+  position: fixed;
 }
  
 .nav a.active {
   background-color: #fff;
   color: #444;
   cursor: default;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition-delay: 0.5s;
+  position: fixed;
 }
  
 @media screen and (min-width: 600px) {
@@ -79,7 +104,7 @@ h1{
     text-align: center;
     padding: 0px 0px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 15px;
     padding-right: 0px;
     padding-left: 0px;
     border-radius: 5px;
@@ -102,9 +127,10 @@ h1{
 .answerOuter {
             border: 1px solid #f4f4f4;
             border-radius: 5px;
-            height: 120px;
+            height: 60px;
             position: relative;
-            top: 10px;
+            left: 10px;
+            width: 1240px;
             background: #f4f4f4;
             margin-left: 20px
             margin-right:100px;
