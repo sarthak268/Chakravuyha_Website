@@ -3,7 +3,8 @@
 <head>
 	<link rel="stylesheet" href="static/quesans.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+	<!--link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}"-->
+	
 	<title>Chakravyuha | Esya 2017</title>
 	<!-- <link rel="stylesheet" href="static/style.css"> -->
 	
@@ -15,391 +16,114 @@
 	</script>
 </head>
 <body> <!--background="static/images/yo3.jpg"-->
-<!--div id="particles-js">
 
-	<br><br><br><br><br>
-	<div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 1</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-		<form action = "" method = "POST">
-         <p><input type = "text" name = "answer" id="text" /></p>
-         <p><input type = "submit" name = "1" value = "SUBMIT" onclick="clear_field();"/></p>
-      	</form>
-	  </div>
-	</div>
-
-</div-->
-
-<!--div id="particles-js">
-
-	<div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 2</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	    
-	    <form action = "" method = "POST">
-         <p><input type = "text" name = "answer" id="text"/></p>
-         <p><input type = "submit" name = "2" value = "SUBMIT" onclick="clear_field();"/></p>
-      	</form>
-	  </div>
-	</div>
-
-</div-->
-
-<!--div id="particles-js">
-
-	<div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 3</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-
-	    <form action = "" method = "POST">
-         <p><input type = "text" name = "answer" id="text"/></p>
-         <p><input type = "submit" name = "3" value = "SUBMIT" onclick="clear_field();"/></p>
-      	</form>
-	  </div>
-	</div>
-
-</div-->
-
-<!--div id="particles-js">
-
-	<div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 4</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	    <form action = "" method = "POST">
-         <p><input type = "text" name = "answer" id="text"/></p>
-         <p><input type = "submit" name = "4" value = "SUBMIT" onclick="clear_field();"/></p>
-      	</form>
-	  </div>
-	</div>
-
-</div-->
 
 <script src="{{url_for('static', filename='app.js')}}"></script>
 
-<br><br><br><br><br>
-	<div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 1</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <div class="answerOuter pull-left">
+        <label for="ans1" class="option opt1 pull-left">
+            <input type="radio" name="ans1" id="ans1" />
+            <span class="inner">Question 1</span>
+        </label>
+        <label for="ans2" class="option opt1 pull-left">
+            <input type="radio" name="ans2" id="ans2" />
+            <span class="inner">Question 2</span>
+        </label>
+        <label for="ans3" class="option opt1 pull-left">
+            <input type="radio" name="ans3" id="ans3" />
+            <span class="inner">Question 3</span>
+        </label>
+        <label for="ans4" class="option opt1 pull-left">
+            <input type="radio" name="ans4" id="ans4" />
+            <span class="inner">Question 4</span>
+        </label>
+    </div>
+
+<br><br>
+
+	<div id="f1">
+	  <center>
+	  <br><br><br>
+	  <font color="white" size="20px"><b>QUESTION 1</b></font>
+	  <br><br><br><br>
+	    <a><font color="#D3D3D3">Hint 1: Yet to come</font></a>
+	    <br>
+	    <a><font color="#D3D3D3">Hint 2: Yet to come</font></a>
+	    <br>
+	    <a><font color="#D3D3D3">Hint 3: Yet to come</font></a>
+	    
 		<form action = "" method = "POST">
          <p><input type = "text" name = "answer" id="text" /></p>
          <p><input type = "submit" name = "1" value = "SUBMIT" onclick="clear_field();"/></p>
       	</form>
-	  </div>
-	</div>
+      	</center>
 	
-<br><br><br><br><br><br>
-<div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 2</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<br><br>
+	</div>
+
+	<div id="f2">
+	  <center>
+	  <br><br><br>
+	  <font color="white" size="20px"><b>QUESTION 2</b></font>
+	  <br><br><br><br>
+	    <a><font color="#D3D3D3">Hint 1: Yet to come</font></a>
+	    <br>
+	    <a><font color="#D3D3D3">Hint 2: Yet to come</font></a>
+	    <br>
+	    <a><font color="#D3D3D3">Hint 3: Yet to come</font></a>
 	    
-	    <form action = "" method = "POST">
-         <p><input type = "text" name = "answer" id="text"/></p>
+		<form action = "" method = "POST">
+         <p><input type = "text" name = "answer" id="text" /></p>
          <p><input type = "submit" name = "2" value = "SUBMIT" onclick="clear_field();"/></p>
       	</form>
-	  </div>
+      	</center>
+	
+	<br><br>
 	</div>
 
-<br><br><br><br><br><br>
-
-<div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 3</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-
-	    <form action = "" method = "POST">
-         <p><input type = "text" name = "answer" id="text"/></p>
+	<div id="f3">
+	  <center>
+	  <br><br><br>
+	  <font color="white" size="20px"><b>QUESTION 3</b></font>
+	  <br><br><br><br>
+	    <a><font color="#D3D3D3">Hint 1: Yet to come</font></a>
+	    <br>
+	    <a><font color="#D3D3D3">Hint 2: Yet to come</font></a>
+	    <br>
+	    <a><font color="#D3D3D3">Hint 3: Yet to come</font></a>
+	    
+		<form action = "" method = "POST">
+         <p><input type = "text" name = "answer" id="text" /></p>
          <p><input type = "submit" name = "3" value = "SUBMIT" onclick="clear_field();"/></p>
       	</form>
-	  </div>
+      	</center>
+	
+	<br><br>
 	</div>
 
-<br><br><br><br><br><br>
-
-<div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 4</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-
-	    <form action = "" method = "POST">
-         <p><input type = "text" name = "answer" id="text"/></p>
+	<div id="f4">
+	  <center>
+	  <br><br><br>
+	  <font color="white" size="20px"><b>QUESTION 4</b></font>
+	  <br><br><br><br>
+	    <a><font color="#D3D3D3">Hint 1: Yet to come</font></a>
+	    <br>
+	    <a><font color="#D3D3D3">Hint 2: Yet to come</font></a>
+	    <br>
+	    <a><font color="#D3D3D3">Hint 3: Yet to come</font></a>
+	    
+		<form action = "" method = "POST">
+         <p><input type = "text" name = "answer" id="text" /></p>
          <p><input type = "submit" name = "4" value = "SUBMIT" onclick="clear_field();"/></p>
       	</form>
-	  </div>
-	</div>
-
-	<br><br><br><br><br><br>
-
-<div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 5</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	    <form action = "" method = "POST">
-         <p><input type = "text" name = "answer" id="text"/></p>
-         <p><input type = "submit" name = "5" value = "SUBMIT" onclick="clear_field();"/></p>
-      	</form>
-	  </div>
-	</div>
-	<br><br><br><br><br><br><div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 6</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	    <form action = "" method = "POST">
-         <p><input type = "text" name = "answer" id="text"/></p>
-         <p><input type = "submit" name = "6" value = "SUBMIT" onclick="clear_field();"/></p>
-      	</form>
-	  </div>
-	</div>
-	<br><br><br><br><br><br><div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 7</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	    <form action = "" method = "POST">
-         <p><input type = "text" name = "answer" id="text"/></p>
-         <p><input type = "submit" name = "7" value = "SUBMIT" onclick="clear_field();"/></p>
-      	</form>
-	  </div>
-	</div>
-	<br><br><br><br><br><br><div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 8</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	    <form action = "" method = "POST">
-         <p><input type = "text" name = "answer" id="text"/></p>
-         <p><input type = "submit" name = "8" value = "SUBMIT" onclick="clear_field();"/></p>
-      	</form>
-	  </div>
-	</div>
-	<br><br><br><br><br><br><div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 9</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	   
-	    <form action = "" method = "POST">
-         <p><input type = "text" name = "answer" id="text"/></p>
-         <p><input type = "submit" name = "9" value = "SUBMIT" onclick="clear_field();"/></p>
-      	</form>
-	  </div>
-	</div>
-	<br><br><br><br><br><br><div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 10</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	    
-	    <form action = "" method = "POST">
-         <p><input type = "text" name = "answer" id="text"/></p>
-         <p><input type = "submit" name = "10" value = "SUBMIT" onclick="clear_field();"/></p>
-      	</form>
-	  </div>
-	</div>
-	<br><br><br><br><br><br><div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 11</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	    <form action = "" method = "POST">
-         <p><input type = "text" name = "answer" id="text"/></p>
-         <p><input type = "submit" name = "11" value = "SUBMIT" onclick="clear_field();"/></p>
-      	</form>
-	  </div>
-	</div>
-	<br><br><br><br><br><br><div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 12</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	    
-	    <form action = "" method = "POST">
-         <p><input type = "text" name = "answer" id="text"/></p>
-         <p><input type = "submit" name = "12" value = "SUBMIT" onclick="clear_field();"/></p>
-      	</form>
-	  </div>
-	</div>
-	<br><br><br><br><br><br><div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 13</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	    
-	    <form action = "" method = "POST">
-         <p><input type = "text" name = "answer" id="text"/></p>
-         <p><input type = "submit" name = "13" value = "SUBMIT" onclick="clear_field();"/></p>
-      	</form>
-	  </div>
-	</div>
-	<br><br><br><br><br><br><div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 14</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-		<form action = "" method = "POST">
-         <p><input type = "text" name = "answer" id="text"/></p>
-         <p><input type = "submit" name = "14" value = "SUBMIT" onclick="clear_field();"/></p>
-      	</form>
-	  </div>
-	</div>
-	<br><br><br><br><br><br><div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 15</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	   
-	    <form action = "" method = "POST">
-         <p><input type = "text" name = "answer" id="text"/></p>
-         <p><input type = "submit" name = "15" value = "SUBMIT" onclick="clear_field();"/></p>
-      	</form>
-	  </div>
-	</div>
-	<br><br><br><br><br><br><div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 16</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	    <form action = "" method = "POST">
-         <p><input type = "text" name = "answer" id="text"/></p>
-         <p><input type = "submit" name = "16" value = "SUBMIT" onclick="clear_field();"/></p>
-      	</form>
-	  </div>
-	</div>
-	<br><br><br><br><br><br><div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 17</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	    <form action = "" method = "POST">
-         <p><input type = "text" name = "answer" id="text"/></p>
-         <p><input type = "submit" name = "17" value = "SUBMIT" onclick="clear_field();"/></p>
-      	</form>
-	  </div>
-	</div>
-	<br><br><br><br><br><br><div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 18</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	   <form action = "" method = "POST">
-         <p><input type = "text" name = "answer" id="text"/></p>
-         <p><input type = "submit" name = "18" value = "SUBMIT" onclick="clear_field();"/></p>
-      	</form>
-	  </div>
-	</div>
-	<br><br><br><br><br><br><div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 19</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	    <form action = "" method = "POST">
-         <p><input type = "text" name = "answer" id="text"/></p>
-         <p><input type = "submit" name = "19" value = "SUBMIT" onclick="clear_field();"/></p>
-      	</form>
-	  </div>
-	</div>
-	<br><br><br><br><br><br><div class="dropdown">
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	  <button class="dropbtn" style="height: 50px;width: 150px;"><font color="#2B4976"><b>Question 20</b></font></button>
-	  <div class="dropdown-content">
-	    <a><font color="#021F4B">Hint 1: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 2: Yet to come</font></a>
-	    <a><font color="#021F4B">Hint 3: Yet to come</font></a>
-	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	   	<form action = "" method = "POST">
-         <p><input type = "text" name = "answer" id="text"/></p>
-         <p><input type = "submit" name = "20" value = "SUBMIT" onclick="clear_field();"/></p>
-      	</form>
-	  </div>
-	</div>
+      	</center>
 	
-	<br><br><br><br><br><br>
-	<br><br><br><br><br><br>
-	<br><br><br><br><br><br>
+	<br><br>
+	</div>
+
+
+	  
+	
 <!--script src="{{url_for('static', filename='app.js')}}"></script-->
 <!-- </div> -->
 
