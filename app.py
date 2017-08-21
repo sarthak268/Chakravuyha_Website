@@ -107,12 +107,13 @@ def qa():
 		
 		ans = request.form['answer']
 		user = User.query.filter_by(username=current_user.username).first()
-		a = 'sha256$F7mTwQF0$b2cca448335756fae2d22f5fc4ef4519c5b472f8bffd4db07e320cfe173cfc3e'
+		#h = generate_password_hash('7.4', method='sha256')
 		b = 'sha256$xaL6YZBn$f69a2e4bf44292f7b8fec7838eb86f47ce6199474afae260b3101a5701be24cc'
-		c = 'sha256$rWLyNmM8$6066b13b14c755b3c26c82d68567b1639af739047db518634ac3f9c8e0e1df1d'
-		d = 'sha256$z6ponoZu$e519e26ef06c2e7461c381ceee785f675f2b133b23dccd4f9813c486cf7637e9'
-		e = 'sha256$nXacAlxW$65041ae92ecd2a80890c218d868f65fd688f5409bf61b81bb9bf8b31d96188cd'
-		
+		a2 = 'sha256$sfDpsQzW$eeb7eaea54bb73ec9ebca295e3144e4bcbf4bb8cf0ed94677be42a8a35e4abb4'
+		a3 = 'sha256$zuYDaceG$7d5eb73c31314b493b868c09771fb6406c23c2db77b8024cd4e55b988df2c081'
+		a4 = 'sha256$jUlSRWgz$a37547990a573f228c94351a74362ef9b349b9cb6d2d22482ed82c087192061f'
+		a5 = 'sha256$5Wq4yj45$9e8703689f1a6ec208f8230bae4f2d730eca05313e40bd113c6b6edb2c104bb0'
+
 		if request.form.get('1'):
 			user = User.query.filter_by(username=current_user.username)
 			user = User.query.filter_by(username=current_user.username).update(dict(q1=1))
@@ -129,7 +130,7 @@ def qa():
 			if current_user.q2 != 1:
 				user = User.query.filter_by(username=current_user.username).update(dict(q2=-1))
 				db.session.commit()
-			if check_password_hash(b,request.form['answer']):
+			if check_password_hash(a2,request.form['answer']):
 				user = User.query.filter_by(username=current_user.username).update(dict(q2=1))
 				db.session.commit()
 				if current_user.q2==1:
@@ -144,7 +145,7 @@ def qa():
 			if current_user.q3!=1:
 				user = User.query.filter_by(username=current_user.username).update(dict(q3=-1))
 				db.session.commit()
-			if check_password_hash(b,request.form['answer']):
+			if check_password_hash(a3,request.form['answer']):
 				user = User.query.filter_by(username=current_user.username).update(dict(q3=1))
 				db.session.commit()
 				if current_user.q3==1:
@@ -158,7 +159,7 @@ def qa():
 			if current_user.q4!=1:
 				user = User.query.filter_by(username=current_user.username).update(dict(q4=-1))
 				db.session.commit()
-			if check_password_hash(b,request.form['answer']):
+			if check_password_hash(a4,request.form['answer']):
 				user = User.query.filter_by(username=current_user.username).update(dict(q4=1))
 				db.session.commit()
 				if current_user.q4==1:
@@ -172,7 +173,7 @@ def qa():
 			if current_user.q5!=1:
 				user = User.query.filter_by(username=current_user.username).update(dict(q5=-1))
 				db.session.commit()
-			if check_password_hash(b,request.form['answer']):
+			if check_password_hash(a5,request.form['answer']):
 				user = User.query.filter_by(username=current_user.username).update(dict(q5=1))
 				db.session.commit()
 				if current_user.q5==1:
@@ -181,7 +182,7 @@ def qa():
 				return render_template('qa_return.html')
 			return render_template('qa_return2.html')
 
-		elif request.form.get('6'):
+		'''elif request.form.get('6'):
 			user = User.query.filter_by(username=current_user.username)
 			if current_user.q6!=1:
 				user = User.query.filter_by(username=current_user.username).update(dict(q6=-1))
@@ -250,6 +251,7 @@ def qa():
 					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
 					db.session.commit()
 				return render_template('qa_return.html')
+			#return h
 			return render_template('qa_return2.html')
 
 		elif request.form.get('11'):
@@ -390,7 +392,7 @@ def qa():
 					user = User.query.filter_by(username=current_user.username).update(dict(score=5))
 					db.session.commit()
 				return render_template('qa_return.html')
-			return render_template('qa_return2.html')
+			return render_template('qa_return2.html')'''
 
 	return render_template('ques_ans.html')
 
@@ -473,5 +475,4 @@ def blank():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
-    db.create_all()
+    app.run()

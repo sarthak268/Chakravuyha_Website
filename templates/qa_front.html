@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+
+<html class="no-js">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>CHAKRAVYUHA | ESYA 2017</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="{{url_for('static', filename='animate.css')}}">
+	<link rel="stylesheet" href="{{url_for('static', filename='flexslider.css')}}">
+	<link rel="stylesheet" href="{{url_for('static', filename='icomoon.css')}}">
+	<link rel="stylesheet" href="{{url_for('static', filename='bootstrap.css')}}">
+	<link rel="stylesheet" href="{{url_for('static', filename='style_front.css')}}">
+	<!-- Animate -->
+	<!--<link rel="stylesheet" href="static/animate.css">
+	 Flexslider -->
+	<!--<link rel="stylesheet" href="static/flexslider.css">
+	 Icomoon 
+	<link rel="stylesheet" href="static/icomoon.css">
+	 Bootstrap  
+	<link rel="stylesheet" href="static/bootstrap.css">
+
+	<link rel="stylesheet" href="static/style_front.css"> -->
+
+
+	<!-- Modernizr JS -->
+	<!--<script src="js/modernizr-2.6.2.min.js"></script>-->
+	<script src="{{url_for('static', filename='modernizr-2.6.2.min.js')}}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+	
+	<div id="fh5co-header">
+		<div class="container">
+			<!-- Mobile Toggle Menu Button -->
+			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+			<!--div id="fh5co-logo">
+				<a href="#">CHAKRAVYUHA<span>.</span></a>
+			</div--	>
+			<nav id="fh5co-main-nav">
+				<ul>
+					<li><a href="#" data-nav-section="home">Q1</a></li>
+					<li><a href="#" data-nav-section="portfolio">Q2</a></li>
+					<li><a href="#" data-nav-section="about">Q3</a></li>
+					<li><a href="#" data-nav-section="home">Q4</a></li>
+					<li><a href="#" data-nav-section="portfolio">Q5</a></li>
+					<li><a href="#" data-nav-section="about">Q6</a></li>
+					<li><a href="#" data-nav-section="home">Q7</a></li>
+					<li><a href="#" data-nav-section="portfolio">Q8</a></li>
+					<li><a href="#" data-nav-section="about">Q9</a></li>
+					<li><a href="#" data-nav-section="home">Q10</a></li>
+					<li><a href="#" data-nav-section="portfolio">Q11</a></li>
+					<li><a href="#" data-nav-section="about">Q12</a></li>
+					<li><a href="#" data-nav-section="home">Q13</a></li>
+					<li><a href="#" data-nav-section="portfolio">Q14</a></li>
+					<li><a href="#" data-nav-section="about">Q15</a></li>
+					<li><a href="#" data-nav-section="home">Q16</a></li>
+					<li><a href="#" data-nav-section="portfolio">Q17</a></li>
+					<li><a href="#" data-nav-section="about">Q18</a></li>
+					<li><a href="#" data-nav-section="portfolio">Q19</a></li>
+					<li><a href="#" data-nav-section="about">Q20</a></li>
+					<!--li><a href="#" data-nav-section="contact">Event Heads</a></li-->
+					<!--li><a href="{{ url_for('signup') }}">Login</a></li>
+					<li><a href="blank.html">Go to Questions</a></li-->
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div id="fh5co-main">
+		<div class="fh5co-overlay-mobile"></div>
+		<div id="fh5co-home" class="js-fullheight" data-section="home">
+
+			<div class="flexslider">
+				
+				<div class="fh5co-text">
+					<div class="container">
+						<div class="row text-center">
+							<h1 class="animate-box"><font color="white">CHAKRAVYUHA | ESYA 2017</font></h1>
+							<div class="fh5co-go animate-box">
+								<span><a href="{{ url_for('signup') }}"><font size="4px">CLICK HERE TO LOGIN</font></a></span>
+								<span><a href="{{ url_for('blank') }}"><font size="4px">GO TO QUESTIONS</font></a></span>
+								<span><a href="{{ url_for('blank') }}"><font size="4px">GO TO DASHBOARD</font></a></span>
+								
+								<a href="#" class="js-fh5co-next">
+									More Details
+									<span><i class="icon-arrow-down2"></i></span>
+								</a>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			  	<ul class="slides">
+
+					<li style = "background-image : url('/static/images/back.jpg');" data-stellar-background-ratio="0.5"></li>
+					<li style = "background-image : url('/static/images/back.jpg');" data-stellar-background-ratio="0.5"></li>
+					<li style = "background-image : url('/static/images/back.jpg');" data-stellar-background-ratio="0.5"></li>
+					
+			  	</ul>
+
+			</div>
+		</div>
+
+		<div id="fh5co-portfolio" data-section="portfolio">
+			<div class="container">
+				<div class="row r-pb">
+					<div class="col-md-8 col-md-offset-2 text-center section-heading">
+						<!--h2 class="fh5co-section-title animate-box">Portfolio</h2-->
+						<p class="fh5co-lead animate-box">It’s all about clues and conundrums. Yes, it is Chakravyuha, the online hunt for cryptic clues. It consists of multiple levels, each testing your ability to put your mind to finding and cracking clues. With each right answer, you get one step deeper into the problem solving maze, and ultimately reach the destiny!</p>
+					</div>
+				</div>
+				<!--div class="row">
+					<div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12 animate-box">
+						<div class="img-grid">
+							<img src="images/img5.jpg" alt="Free HTML5 template by FREEHTML5.co" class="img-responsive" width="300px" height="300px">
+							<!--a href="portfolio-single.html" class="transition"-->
+								<!--div>
+									<span class="fh5co-meta"></span>
+									<h2 class="fh5co-title"></h2>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12 animate-box">
+						<div class="img-grid">
+							<img src="images/v.jpg" alt="Free HTML5 template by FREEHTML5.co" class="img-responsive" width="300px" height="450px">
+							<!--a href="portfolio-single.html" class="transition"-->
+								<!--div>
+									<span class="fh5co-meta"></span>
+									<h2 class="fh5co-title"></h2>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12 animate-box">
+						<div class="img-grid">
+							<img src="images/img6.jpg" alt="Free HTML5 template by FREEHTML5.co" class="img-responsive" width="300px" height="500px">
+							<!--a href="portfolio-single.html" class="transition"-->
+								<!--div>
+									<span class="fh5co-meta"></span>
+									<h2 class="fh5co-title"></h2>
+								</div>
+							</a>
+						</div>
+					</div-->
+
+					<div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12 animate-box">
+						<div class="img-grid">
+							<img src="{{ url_for('static', filename = 'images/abcd.jpg') }}"  class="img-responsive" width="500px">
+							<!--img src="{{ url_for('static', filename = 'img5.jpg') }}"  class="img-responsive" width="500px"-->
+
+							<a href="https://docs.google.com/a/iiitd.ac.in/document/d/1vBjbIy22E5CfztX4DZxvbs5u8MwthgrPyIxDWMsJahM/edit?usp=sharing" class="transition">
+								<div>
+									
+									<h2 class="fh5co-title">LAST YEAR QUESTION BANK</h2>
+									<span class="fh5co-meta">Here is a LINK to last year's question bank. Have a look at the question bank of Chakravyuha 2016 so as to get a clear idea of how this year's questions are going to be.</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12 animate-box">
+						<div class="img-grid">
+							<img src="{{ url_for('static', filename = 'img5.jpg') }}" class="img-responsive" width="500px">
+							<a href="" class="transition">
+								<div>
+									<h2 class="fh5co-title">PRIZES</h2>
+									<span class="fh5co-meta">Attractive Cool Cash as well as Inkind Prizes to be won, worth 30,000.<br> Prizes for top 5 scorers of the contest.</span>
+									
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12 animate-box">
+						<div class="img-grid">
+							<img src="{{ url_for('static', filename = 'images/img6.jpg') }}"" class="img-responsive" width="500px">
+							<a href="" class="transition">
+								<div>
+									<h2 class="fh5co-title">BONUS AWARDS</h2>
+									<span class="fh5co-meta">Separate prizes for Bonus Questions.<br>Some additional prizes for Quickest Question Solver and the Perfectionist for the one who answers the questions in least number of attempts.(Participants answering a minimum of 5 questions will be eligible for prizes)</span>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<!--div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12 animate-box">
+						<div class="img-grid">
+							<img src="images/pic_7.jpg" alt="Free HTML5 template by FREEHTML5.co" class="img-responsive">
+							<a href="portfolio-single.html" class="transition">
+								<div>
+									<span class="fh5co-meta">15 images</span>
+									<h2 class="fh5co-title">Rob &amp; Jean Wedding</h2>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12 animate-box">
+						<div class="img-grid">
+							<img src="images/pic_8.jpg" alt="Free HTML5 template by FREEHTML5.co" class="img-responsive">
+							<a href="portfolio-single.html" class="transition">
+								<div>
+									<span class="fh5co-meta">15 images</span>
+									<h2 class="fh5co-title">Rob &amp; Jean Wedding</h2>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12 animate-box">
+						<div class="img-grid">
+							<img src="images/pic_9.jpg" alt="Free HTML5 template by FREEHTML5.co" class="img-responsive">
+							<a href="portfolio-single.html" class="transition">
+								<div>
+									<span class="fh5co-meta">15 images</span>
+									<h2 class="fh5co-title">Rob &amp; Jean Wedding</h2>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12 animate-box">
+						<div class="img-grid">
+							<img src="images/pic_10.jpg" alt="Free HTML5 template by FREEHTML5.co" class="img-responsive">
+							<a href="portfolio-single.html" class="transition">
+								<div>
+									<span class="fh5co-meta">15 images</span>
+									<h2 class="fh5co-title">Rob &amp; Jean Wedding</h2>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12 animate-box">
+						<div class="img-grid">
+							<img src="images/pic_11.jpg" alt="Free HTML5 template by FREEHTML5.co" class="img-responsive">
+							<a href="portfolio-single.html" class="transition">
+								<div>
+									<span class="fh5co-meta">15 images</span>
+									<h2 class="fh5co-title">Rob &amp; Jean Wedding</h2>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12 animate-box">
+						<div class="img-grid">
+							<img src="images/pic_12.jpg" alt="Free HTML5 template by FREEHTML5.co" class="img-responsive">
+							<a href="portfolio-single.html" class="transition">
+								<div>
+									<span class="fh5co-meta">15 images</span>
+									<h2 class="fh5co-title">Rob &amp; Jean Wedding</h2>
+								</div>
+							</a>
+						</div>
+					</div-->
+
+				</div>
+			</div>
+		</div>
+
+		<div id="fh5co-about" data-section="about">
+			<div class="container">
+				<div class="row r-pb">
+					<div class="col-md-8 col-md-offset-2 text-center section-heading animate-box">
+						<h1 class="animate-box"><font size="10px" color="white">Rules of the Contest</font></h1>
+						<p class="fh5co-lead">
+							<ul>
+							<li align="left">To participate, sign up at the <b>Chakravyuha Website</b>, the answers are be submitted here itself. The link to the website will be provided soon. Only individual participation is allowed.</li><br>
+							<li align="left">The contest is held online and participants anywhere with a relevant email ID and currently enrolled in any kind of an educational organisation and pursuing any career can take part.</li><br>
+							<li align="left">The contest lasts for a duration of <b>4 DAYS</b> and there are a total of <b>20 LEVELS</b> with increasing levels of difficulty.</li><br>
+							<li align="left">The one who correctly answers all the questions or finishes with the maximum score at the end is declared as the winner.</li><br>
+							<li align="left">Each question will be provided with a score which will automatically be added to the participant’s score if he/she answers the question correctly. There will also be partial score given for some special questions.</li><br>
+							<li align="left">There will be some <b>Bonus Questions</b> listed on the website for which participants answering them correctly will be eligible for cool prizes.</li><br>
+							<li align="left">The participants are provided with <b>last years question bank</b> for Chakravyuha 2016, for them to practise and have an idea about how are the questions going to be.</li><br>
+							<li align="left">The organizer’s decision is final and binding, they have the right to change rules as they deem fit and have the right to disqualify any participant if they break any rule.</li><br>
+							</ul>
+						</p>
+					</div>
+				</div>
+				<!--div class="row">
+					<div class="col-md-6 animate-box">
+						<div class="fh5co-text with-plus">
+							<h2>Rob Smith</h2>
+							<span class="fh5co-meta">Photographer, Video Editor</span>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+						</div>
+					</div>
+					<div class="col-md-6 animate-box">
+						<div class="fh5co-text">
+							<h2>Jean Smith</h2>
+							<span class="fh5co-meta">Photographer, Copy writer</span>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+						</div>
+					</div>
+
+				</div-->
+			</div>
+		</div>
+
+		
+
+		<div id="fh5co-contact" data-section="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center section-heading">
+						<h2 class="fh5co-section-title animate-box"><font size="20px">EVENT HEADS</font></h2><br><br>
+						<p class="fh5co-lead animate-box">SHAGUN UPPAL &nbsp| &nbsp SARTHAK BHAGAT &nbsp| &nbsp ANUSHIKA VERMA</p>
+
+						<font size-"12px"> shagun16088@iiitd.ac.in &nbsp| &nbsp sarthak16189@iiitd.ac.in &nbsp| &nbsp anushika16015@iiitd.ac.in</font><br><BR><br><br>
+						
+						<!--p class="animate-box">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p-->
+						<p class="animate-box"><a href="https://www.facebook.com/events/447532492262189/" target="_blank" class="btn btn-primary btn-lg">VISIT FACEBOOK PAGE</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="fh5co-contact" data-section="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center section-heading">
+						<h2 class="fh5co-section-title animate-box"><font size="20px">OUR SPONSORS</font></h2><br><br>
+						<p class="fh5co-lead animate-box">PUNJAB NATIONAL BANK</p>
+
+						<img src="/static/images/pnb.jpg" width="500px">
+
+						<br>
+						
+						<!--p class="animate-box">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p-->
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="fh5co-testimony" style="background-image: url('/static/images/slide_1.jpg');" data-stellar-background-ratio="0.5">
+			<div class="fh5co-overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="flexslider animate-box">
+							<ul class="slides">
+								<li>
+									<blockquote>
+										<p><font size="8px">&ldquo;
+										As you progress through the different stages of this mysterious puzzle, the mystery unfolds and the complexity progressively increases. So, the deeper you dig, the closer you reach to your destination.<br>
+										Every lock is a key to another lock.
+										&rdquo;</font> </p>
+									</blockquote>
+								</li>
+								<li>
+									<blockquote>
+										<p>&ldquo;
+										Chakravyuha is an online cryptic hunt, solely based on your ability to explore answer to mind-boggling questions, that not only test your ability to think deep into slight inklings but also find your way out of these crafty puzzles using the ultimate source : GOOGLE. Your ability to google and find out of solutions for the problems determines how far you reach in the contest.
+										&rdquo; </p>
+									</blockquote>
+								</li>
+								<li>
+									<blockquote>
+										<p>&ldquo;
+										It’s all about clues and conundrums. Yes, it is Chakravyuha, the online hunt for cryptic clues.It consists of multiple levels, each testing your ability to put your mind to finding and cracking clues. With each right answer, you get one step deeper into the problem solving maze, and ultimately reach the destiny!
+										&rdquo; </p>
+									</blockquote>
+								</li>
+								
+								
+							</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!--div id="fh5co-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 animate-box">
+						<div class="fh5co-footer-widget">
+							<p>&copy; Fotografy Free HTML5 Template. All Rights Reserved.</p>
+							<p>Designed by <a href="http://freehtml5.co/">FREEHTML5.co</a> Demo Images: <a href="http://unsplash.com/" target="_blank">Unsplash</a> &amp; <a href="http://pexels.com/" target="_blank">Pexels</a></p>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6 animate-box">
+						<div class="fh5co-footer-widget">
+							<ul class="fh5co-social pull-right">
+								<li>
+									<a href="#"><i class="icon-twitter"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="icon-facebook"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="icon-vine"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="icon-behance"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="icon-google"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="icon-vimeo"></i></a>
+								</li>
+							</ul>
+						<div class="fh5co-footer-widget">
+					</div>
+				</div>
+			</div>
+		</div-->
+
+	</div>
+
+	<script src="{{url_for('static', filename='jquery.min.js')}}"></script>
+	<script src="{{url_for('static', filename='jquery.easing.1.3.js')}}"></script>
+	<script src="{{url_for('static', filename='jquery.waypoints.min.js')}}"></script>
+	<script src="{{url_for('static', filename='jquery.stellar.min.js')}}"></script>
+	<script src="{{url_for('static', filename='jquery.flexslider-min.js')}}"></script>
+	<script src="{{url_for('static', filename='main1.js')}}"></script>
+
+
+	</body>
+</html>
+
