@@ -9,12 +9,9 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 import tempfile
 import os.path
 from flask.ext.scss import Scss
-#from passlib.hash import sha256_crypt
-from flask.ext.bcrypt import Bcrypt
 from flask_login import current_user
 #from api import Query
 
-bc = Bcrypt(None)
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'Thisissupposedtobesecret!'
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////database.db'
@@ -113,8 +110,8 @@ def qa():
 			b = 'sha256$xaL6YZBn$f69a2e4bf44292f7b8fec7838eb86f47ce6199474afae260b3101a5701be24cc'
 			a2 = 'sha256$sfDpsQzW$eeb7eaea54bb73ec9ebca295e3144e4bcbf4bb8cf0ed94677be42a8a35e4abb4'
 			a3 = 'sha256$zuYDaceG$7d5eb73c31314b493b868c09771fb6406c23c2db77b8024cd4e55b988df2c081'
-			a4 = 'sha256$jUlSRWgz$a37547990a573f228c94351a74362ef9b349b9cb6d2d22482ed82c087192061f'
-			a5 = 'sha256$5Wq4yj45$9e8703689f1a6ec208f8230bae4f2d730eca05313e40bd113c6b6edb2c104bb0'
+			a4 = 'sha256$5Wq4yj45$9e8703689f1a6ec208f8230bae4f2d730eca05313e40bd113c6b6edb2c104bb0'
+			a5 = 'sha256$dM978nMh$09cad5e25e49c3df3ee216ffd43157686b9f0eb0567e2f654a37225e100fc14d'
 
 			if request.form.get('1'):
 				user = User.query.filter_by(username=current_user.username)
